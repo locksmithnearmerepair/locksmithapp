@@ -30,28 +30,24 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
-    <div id="root"></div>
+<script>
+    // CONFIGURACIÓN OFICIAL Y CORREGIDA PARA TU PROYECTO
+    const firebaseConfig = {
+      apiKey: "AIzaSyBEswCrXBSMsnFnS2H8fZ-oxkCvAkEhrjk",
+      authDomain: "gen-lang-client-0224947576.firebaseapp.com",
+      databaseURL: "https://gen-lang-client-0224947576-default-rtdb.firebaseio.com",
+      projectId: "gen-lang-client-0224947576",
+      storageBucket: "gen-lang-client-0224947576.firebasestorage.app",
+      messagingSenderId: "822057026905",
+      appId: "1:822057026905:web:9dd7727a6e72b42e9f3848"
+    };
 
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-
-    <script type="text/babel">
-        // CONFIGURACIÓN DE FIREBASE TOTALMENTE CONECTADA
-        const firebaseConfig = {
-            apiKey: "AIzaSyAs7W8wR-Z0z3x0H9E8r7t6y5u4i3o2p1", 
-            authDomain: "gen-lang-client-0224947576.firebaseapp.com",
-            databaseURL: "https://gen-lang-client-0224947576-default-rtdb.firebaseio.com",
-            projectId: "gen-lang-client-0224947576",
-            storageBucket: "gen-lang-client-0224947576.appspot.com",
-            messagingSenderId: "178416288050",
-            appId: "1:178416288050:web:86de1bf37353fc4bd72d4c"
-        };
-
-        if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-        }
-        const db = firebase.database();
+    // Inicialización de la base de datos dentro del script
+    if (!window.firebase.apps.length) {
+      window.firebase.initializeApp(firebaseConfig);
+    }
+    const db = window.firebase.database();
+  </script>
 
         // Icon component wrapper for Lucide icons
         const Icon = ({ name, className = "w-5 h-5", ...props }) => {
